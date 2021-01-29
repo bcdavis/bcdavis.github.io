@@ -1,5 +1,5 @@
 
-.social-links {
+#social-links {
 
     display: flex;
     flex-direction: row;
@@ -34,9 +34,10 @@
     }
 }
   
-.nav-footer{
+#nav-footer{
     //background-color: palegreen;
-    position: fixed !important;
+    position: fixed;
+    float: left;
     bottom: 0%;
     width: 300px;
     display: flex;
@@ -48,6 +49,10 @@
 
     @include respond(tab-port){
         width: 200px;
+    }
+
+    @include respond(phone){
+        position: relative;
     }
 }
   // // same .open from _base.scss --> want to open the side nav
@@ -170,8 +175,24 @@
   }
   
   #vert-nav-top{
-    text-align: right;
-    padding: 3em 16px;
+    // text-align: right;
+    padding: 3em 0;
+
+    .to-hero {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .to-hero a:hover:not(.active) {
+        background-color: transparent;
+        color: rgb(111, 111, 111);
+    }
+
+    .to-hero a:hover.active {
+        background-color: transparent;
+        color: rgb(111, 111, 111);
+    }
   
   
   
@@ -179,34 +200,33 @@
       font-weight: bold;
       font-size: 2.3rem;
       @include respond(tab-port){
-        font-size: 2.1em;
+        font-size: 2.1rem;
       }
       @include respond(phone-land){
-        font-size: 2.1em;
+        font-size: 2.1rem;
       }
       @include respond(phone){
-        font-size: 1.8em;
+        font-size: 1.8rem;
       }
       
     }
     p{
-      font-size: 1.3em;
+      font-size: 1.4rem;
       @include respond(tab-port){
-        font-size: 1.15em;
+        font-size: 1.3rem;
       }
       @include respond(phone-land){
-        font-size: 1.15em;
+        font-size: 1.3rem;
         margin-bottom: 0;
       }
       @include respond(phone){
-        font-size: 1em;
+        font-size: 1.15rem;
       }
     }
   }
   
   .nav-link {
     align-items: center;
-    font-size: 2.2em;
     @include respond(phone-land){
       font-size: 2em;
     }

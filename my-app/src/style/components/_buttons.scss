@@ -86,7 +86,12 @@
   
   
   .case-study-btn{
-    border: none !important;
+    // border: none;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 0px;
+    border-image: linear-gradient(135deg, $primary-color 0%, $secondary-color 100%);
+    border-image-slice: 1;
     font-size: 18px !important;
     
     @media (max-width: 1400px){

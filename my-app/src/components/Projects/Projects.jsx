@@ -266,7 +266,9 @@ const Projects = () => {
                     distance="30px"
                   >
                     <div className="project-wrapper__image">
+
                       <a
+                        className="tiltDiv"
                         href={url || '#!'}
                         target="_blank"
                         aria-label="Project Link"
@@ -285,10 +287,10 @@ const Projects = () => {
                             easing: 'cubic-bezier(.03,.98,.52,.99)',
                           }}
                         >
-                          <div data-tilt className="thumbnail rounded">
-                            <Image src="/images/MiniClueTemp.png" fluid/>
-                            
-                          </div>
+                            <div data-tilt className="thumbnail rounded containerHover">
+                              <Image className="img" src="/images/MiniClueTemp.png" fluid/>
+                              <div className="hoverMe"></div>
+                            </div>
                         </Tilt>
                       </a>
                     </div>

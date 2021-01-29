@@ -50,11 +50,13 @@ const NavBar = () => {
       <Nav navbar={true} className="sidenav menu" id="vert-nav" as="ul">
           <Nav.Item as="li">
             <div id="vert-nav-top">
-              <h3>Ben Davis</h3>
-              <p>UI/UX Designer & Developer</p>
+              <Link className="nav-link to-hero" to="hero" smooth duration={700}>             
+                <h3>Ben Davis</h3>
+                <p>UI/UX Designer & Developer</p>
+              </Link>
             </div>
           </Nav.Item>
-          <Nav.Item as="li">
+          {/* <Nav.Item as="li">
             <Link
               className="nav-link to-hero"
               to="hero"
@@ -68,7 +70,7 @@ const NavBar = () => {
               </div>
               {path1 || 'Home1'}
             </Link>
-          </Nav.Item>
+          </Nav.Item> */}
           <Nav.Item as="li">
             <Link
               className="nav-link to-about"
@@ -114,8 +116,8 @@ const NavBar = () => {
               {path4 || 'Contacts1'}
             </Link>
           </Nav.Item>
-        <ButtonGroup className="nav-footer">
-          <div className="social-links">
+        <ButtonGroup id="nav-footer">
+          <div id="social-links">
             {networks &&
               networks.map((network) => {
                 const { id, name, url } = network;

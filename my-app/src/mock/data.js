@@ -42,31 +42,13 @@ export const projectsData = [
     url: '', // url for live demo of project
     repo: 'https://github.com/bcdavis/CH43-Capstone-Mini-Clue', // if no repo, the button will not show up
   },
-  {
-    id: nanoid(),
-    img: "MiniClueTemp.png",
-    title: 'AnotherOne',
-    info: 'This is a simplified, single-player version of the game Clue. Games consist of one player constantly making accusatory guesses in an attempt to narrow down the culprit and can last as short as a minute (or less). This project was built using <span class="highlight">ReactJS</span>.',
-    info2: '',
-    url: '', // url for live demo of project
-    repo: 'https://github.com/bcdavis/CH43-Capstone-Mini-Clue', // if no repo, the button will not show up
-  },
-  {
-    id: nanoid(),
-    img: "MiniClueTemp.png",
-    title: 'ThirdProject',
-    info: 'This is a simplified, single-player version of the game Clue. Games consist of one player constantly making accusatory guesses in an attempt to narrow down the culprit and can last as short as a minute (or less). This project was built using <span class="highlight">ReactJS</span>.',
-    info2: '',
-    url: '', // url for live demo of project
-    repo: 'https://github.com/bcdavis/CH43-Capstone-Mini-Clue', // if no repo, the button will not show up
-  },
 ];
 
 // CONTACT DATA
 export const contactData = {
   cta: "Let's work together!",
   btn: '',
-  email: '',
+  email: 'bcollinsdavis@gmail.com',
 };
 
 // FOOTER DATA
@@ -75,12 +57,12 @@ export const footerData = {
     {
       id: nanoid(),
       name: 'linkedin',
-      url: '',
+      url: 'https://www.linkedin.com/in/ben-c-davis/',
     },
     {
       id: nanoid(),
       name: 'github',
-      url: '',
+      url: 'https://github.com/bcdavis',
     },
   ],
 };
