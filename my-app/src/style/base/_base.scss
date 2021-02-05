@@ -11,7 +11,7 @@ html {
 
 body {
   font-family: 'Montserrat', sans-serif!important;
-  text-align: center!important;
+  text-align: center !important;
 //   overflow: scroll;
 
   @include respond(phone){
@@ -29,6 +29,7 @@ main{
 }
 
 .right-content{
+  overflow: hidden;
   margin-left: 300px;
   width: 100%;
 

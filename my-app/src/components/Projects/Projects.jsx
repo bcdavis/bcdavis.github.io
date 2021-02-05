@@ -1,11 +1,11 @@
 import React, { useContext, useEffect, useState } from 'react';
 import Fade from 'react-reveal/Fade';
 import Tilt from 'react-tilt';
-import Image from 'react-bootstrap/Image';
-import { Container, Row, Col, Badge } from 'react-bootstrap';
-import ButtonGroup from 'react-bootstrap/ButtonGroup';
+//import Image from 'react-bootstrap/Image';
+import { Container, Row, Col, Badge, ToggleButton, Button, Image, ButtonGroup, Accordion } from 'react-bootstrap';
+//import ButtonGroup from 'react-bootstrap/ButtonGroup';
 //import Button from 'react-bootstrap/Button';
-import ToggleButton from 'react-bootstrap/ToggleButton'
+//import ToggleButton from 'react-bootstrap/ToggleButton'
 import PortfolioContext from '../../context/context';
 import Title from '../Title/Title';
 //import ProjectImg from '../Image/ProjectImg';
@@ -26,11 +26,11 @@ const Projects = () => {
   const csBtnText_toOpen = "View Case Study";
   const csBtnText_toClose = "Close Case Study";
 
-  const drawers = document.querySelectorAll('.case-study-drawer');
+  //const drawers = document.querySelectorAll('.case-study-drawer');
 
   // const [count, setCount] = useState(0);
 
-  let outcome = '';
+  //let outcome = '';
 
   useEffect(() => {
     if (window.innerWidth > 769) {
@@ -72,23 +72,23 @@ const Projects = () => {
     {
       if (buttonElem)
       {
-        console.log("Checking button ---- ");
-        console.log("buttonElem.childNodes[1].nodeValue: ", buttonElem.childNodes[1].nodeValue);
-        console.log("buttonElem.innerText: ", buttonElem.innerText);
+        //console.log("Checking button ---- ");
+        //console.log("buttonElem.childNodes[1].nodeValue: ", buttonElem.childNodes[1].nodeValue);
+        //console.log("buttonElem.innerText: ", buttonElem.innerText);
         if (buttonElem.childNodes[1])
         {
-          console.log("have childNodes");
+          //console.log("have childNodes");
           buttonElem.childNodes[1].nodeValue=text;
           
         }
         else if (buttonElem.value)
         {
-          console.log("have value");
+          //console.log("have value");
           buttonElem.value=text;
         }
         else //if (button.innerHTML)
         {
-          console.log("have innerText");
+          //console.log("have innerText");
           buttonElem.innerText=text;
         }
       }
@@ -101,7 +101,7 @@ const Projects = () => {
   const handleCaseStudy = (e) => {
 
 
-    console.log('CASE STUUUUDY!');
+    //console.log('CASE STUUUUDY!');
     const prevCS = isCaseStudyOpen; // the id and open status of the project last interacted with
     const prevCaseStudyBtn = document.getElementById(`${prevCS.id}`); // grabs the case study button of the current project
     const prevDrawer = document.getElementById(`${prevCS.id}-drawer`); // grab the case study drawer of the project last interacted with
@@ -110,17 +110,17 @@ const Projects = () => {
     const currCaseStudyBtn = document.getElementById(currCSId); // grabs the case study button of the current project
     const currDrawer = document.getElementById(`${currCSId}-drawer`); // grabs the case study drawer of the current project
 
-    console.log("---- Case study information ----");
-    console.log("--------------------------------");
-    console.log("prevCS: ", prevCS);
-    console.log("new currCSId: ", currCSId);
-    console.log("--------------------------------");
-    console.log("prevCaseStudyBtn: ", prevCaseStudyBtn === null ? prevCaseStudyBtn : prevCaseStudyBtn.innerText);
-    console.log("currCaseStudyBtn: ", currCaseStudyBtn.innerText);
-    console.log("--------------------------------");
-    console.log("prevDrawer: ", prevDrawer);
-    console.log("currDrawer: ", currDrawer);
-    outcome = 'outcome';
+    // console.log("---- Case study information ----");
+    // console.log("--------------------------------");
+    // console.log("prevCS: ", prevCS);
+    // console.log("new currCSId: ", currCSId);
+    // console.log("--------------------------------");
+    // console.log("prevCaseStudyBtn: ", prevCaseStudyBtn === null ? prevCaseStudyBtn : prevCaseStudyBtn.innerText);
+    // console.log("currCaseStudyBtn: ", currCaseStudyBtn.innerText);
+    // console.log("--------------------------------");
+    // console.log("prevDrawer: ", prevDrawer);
+    // console.log("currDrawer: ", currDrawer);
+    //outcome = 'outcome';
     // compare id of current case study (currCSId = case study id) to that which is stored in state
     if (currCSId === prevCS.id) {
 
@@ -130,9 +130,9 @@ const Projects = () => {
       //
 
       if (prevCS.open === true) {
-        console.log("This case study was originally open");
+        //console.log("This case study was originally open");
         // If the 'open' status of the last case study is 'true', we want to close that case study
-        outcome += '- selfOpen-->selfClosed -';
+        //outcome += '- selfOpen-->selfClosed -';
         setIsCaseStudyOpen({ open: false, id: currCSId });
         // Change case study button text
         replaceButtonText(prevCaseStudyBtn, csBtnText_toOpen);
@@ -140,8 +140,8 @@ const Projects = () => {
         prevDrawer.classList.remove('drawer-open');
         
       } else {
-        console.log("This case study was originally closed");
-        outcome += '- selfClosed-->selfOpen -';
+        //console.log("This case study was originally closed");
+        //outcome += '- selfClosed-->selfOpen -';
         // If the 'open' status of the last case study is 'false', we want to open that case study
         setIsCaseStudyOpen({ open: true, id: currCSId });
         // Change case study button text
@@ -157,8 +157,8 @@ const Projects = () => {
       //
 
       if (prevCS.open === true) {
-        console.log("This case study was originally open");
-        outcome += '- otherClosed -';
+        //console.log("This case study was originally open");
+        //outcome += '- otherClosed -';
         // Close the case study in previously changed state if it is 'open'
         setIsCaseStudyOpen({ open: false, id: prevCS.id });
         // Change case study button text
@@ -167,14 +167,14 @@ const Projects = () => {
         prevDrawer.classList.remove('drawer-open');
       }
       // Open a new case study
-      outcome += '- selfOpen -';
+      //outcome += '- selfOpen -';
       setIsCaseStudyOpen({ open: true, id: currCSId });
       // Change case study button text
       replaceButtonText(currCaseStudyBtn, csBtnText_toClose);
       // Open the new case study's drawer
       currDrawer.classList.add('drawer-open');
     }
-    console.log(outcome);
+    //console.log(outcome);
   };
 
   // const handleCountClick = (n) => {
@@ -182,21 +182,21 @@ const Projects = () => {
   //   setCount(plusOne);
   // };
 
-  const handleCheck = (e) => {
-    console.log('drawers: ', drawers);
-    console.log(e.currentTarget.value);
-    //  console.log(e.currentTarget.checked);
-    setChecked(e.currentTarget.checked);
+  // const handleCheck = (e) => {
+  //   console.log('drawers: ', drawers);
+  //   console.log(e.currentTarget.value);
+  //   //  console.log(e.currentTarget.checked);
+  //   setChecked(e.currentTarget.checked);
     
 
-    const drawer = document.querySelector('.case-study-drawer');
-    if(checked){
-      drawer.classList.add('drawer-open');
-    }
-    else{
-      drawer.classList.remove('drawer-open');
-    }
-  };
+  //   const drawer = document.querySelector('.case-study-drawer');
+  //   if(checked){
+  //     drawer.classList.add('drawer-open');
+  //   }
+  //   else{
+  //     drawer.classList.remove('drawer-open');
+  //   }
+  // };
 
 
   return (
@@ -205,120 +205,113 @@ const Projects = () => {
         <div className="project-wrapper">
           <Title title="Projects" />
           {projects.map((project) => {
-            const { title, info, info2, url, repo, img, id, techUsed } = project;
+            const { projNum, title, info, info2, url, repo, img, id, techUsed, caseStudy} = project;
             // for each project, store its variables to use for rendering
             //let techList = techUsed.split(" ");
             // split up techUsed string into array of tech names, separated by spaces
 
 
             return (
-              <Row key={id}>
-                <Col lg={4} sm={12}>
-                  <Fade
-                    left={isDesktop}
-                    bottom={isMobile}
-                    duration={500}
-                    delay={250}
-                    distance="30px"
-                  >
-                    <div className="project-wrapper__text">
-                      <h3 className="project-wrapper__text-title">{title || 'Project Title'}</h3>
-                      <div>
-                        <p className="mb-4">
-                          {info === '' ? '' : info}
-                        </p>
-                        <div className="tech-badges">
-                          {techUsed.map((techName) => {
-                            return (
-                              <div className="badgeContainer">
-                                <Badge className="techBadge-outline" variant="light">{techName}</Badge>
-                              </div>
-                            )
-                          })}
+                <Row key={id}>
+                  <Col lg={4} sm={12}>
+                    <Fade
+                      left={isDesktop}
+                      bottom={isMobile}
+                      duration={500}
+                      delay={250}
+                      distance="30px"
+                    >
+                      <div className="project-wrapper__text">
+                        <h3 className="project-wrapper__text-title">{title || 'Project Title'}</h3>
+                        <div>
+                          <p className="mb-4">
+                            {info === '' ? '' : info}
+                          </p>
+                          <div className="tech-badges">
+                            {techUsed.map((techName) => {
+                              return (
+                                <div className="badgeContainer">
+                                  <Badge className="techBadge-outline" variant="light">{techName}</Badge>
+                                </div>
+                              )
+                            })}
 
+                          </div>
                         </div>
-                      </div>
-                      <ButtonGroup toggle vertical className="proj-btns">
-                        <ToggleButton
-                          id={title}
-                          type="checkbox"
-                          className="cta-btn cta-btn--hero case-study-btn"
-                          value={title}
-                          checked={checked}
-                          onChange={(e) => handleCaseStudy(e)}
-                        >
-                          View Case Study
-                        </ToggleButton>
-                        <ButtonGroup className="live-src-btns">
-                          {url === '' ? '' : 
-                            <a
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="cta-btn text-color-main"
-                              href={url || '#!'}
-                            >
-                              See Live
-                            </a>
-                          }
+                        <ButtonGroup toggle vertical className="proj-btns">                        
+                          <ToggleButton
+                            id={title}
+                            type="checkbox"
+                            className="cta-btn cta-btn--hero case-study-btn"
+                            value={title}
+                            checked={checked}
+                            onChange={(e) => handleCaseStudy(e)}
+                          >
+                            View Case Study
+                          </ToggleButton>
+                          <ButtonGroup className="live-src-btns">
+                            {url === '' ? '' : 
+                              <a
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="cta-btn text-color-main"
+                                href={url || '#!'}
+                              >
+                                See Live
+                              </a>
+                            }
 
-                          {repo && (
-                            <a
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="cta-btn text-color-main"
-                              href={repo}
-                            >
-                              Source Code
-                            </a>
-                          )}
+                            {repo && (
+                              <a
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="cta-btn text-color-main"
+                                href={repo}
+                              >
+                                Source Code
+                              </a>
+                            )}
+                          </ButtonGroup>
                         </ButtonGroup>
-                      </ButtonGroup>
-                    </div>
-                  </Fade>
-                </Col>
-                <Col lg={8} sm={12}>
-                  <Fade
-                    right={isDesktop}
-                    bottom={isMobile}
-                    duration={500}
-                    delay={250}
-                    distance="30px"
-                  >
-                    <div className="project-wrapper__image">
+                      </div>
+                    </Fade>
+                  </Col>
+                  <Col lg={8} sm={12}>
+                    <Fade
+                      right={isDesktop}
+                      bottom={isMobile}
+                      duration={500}
+                      delay={250}
+                      distance="30px"
+                    >
+                      <div className="project-wrapper__image">
 
-                      <a
-                        className="tiltDiv"
-                        href={url || '#!'}
-                        target="_blank"
-                        aria-label="Project Link"
-                        rel="noopener noreferrer"
-                      >
-                        <Tilt
-                          options={{
-                            reverse: false,
-                            max: 8,
-                            perspective: 1000,
-                            scale: 1,
-                            speed: 300,
-                            transition: true,
-                            axis: null,
-                            reset: true,
-                            easing: 'cubic-bezier(.03,.98,.52,.99)',
-                          }}
-                        >
-                            <div data-tilt className="thumbnail rounded containerHover">
-                              <Image className="img" src="/images/MiniClueTemp.png" fluid/>
-                              <div className="hoverMe"></div>
-                            </div>
-                        </Tilt>
-                      </a>
-                    </div>
-                  </Fade>
-                </Col>
-                <Col id={`${title}-drawer`} className="case-study-drawer">
-                  <CaseStudySlideDrawer />
-                </Col>
-              </Row>
+                        
+                          <Tilt
+                            options={{
+                              reverse: false,
+                              max: 8,
+                              perspective: 1000,
+                              scale: 1,
+                              speed: 300,
+                              transition: true,
+                              axis: null,
+                              reset: true,
+                              easing: 'cubic-bezier(.03,.98,.52,.99)',
+                            }}
+                          >
+                              <div data-tilt className="thumbnail rounded containerHover">
+                                <Image className="img" src="/images/MiniClueTemp.png" fluid/>
+                                {/* <div className="hoverMe"></div> */}
+                              </div>
+                          </Tilt>
+                      </div>
+                    </Fade>
+                  </Col>
+                  <Col id={`${title}-drawer`} className="case-study-drawer">                    
+                    <CaseStudySlideDrawer currProj={project} key={id} handleCaseStudy={handleCaseStudy} isCaseStudyOpen={isCaseStudyOpen} checked={checked}/>
+                  </Col>
+                </Row>
             );
           })}
         </div>

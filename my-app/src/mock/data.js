@@ -34,6 +34,7 @@ export const aboutData = {
 // PROJECTS DATA
 export const projectsData = [
   {
+    projNum: 0, // Incrememnt this number with each new project -- lets site know the order in which to render projects
     id: nanoid(),
     img: "MiniClueTemp.png",
     title: 'Mini Clue',
@@ -42,45 +43,55 @@ export const projectsData = [
     url: '', // url for live demo of project
     repo: 'https://github.com/bcdavis/CH43-Capstone-Mini-Clue', // if no repo, the button will not show up
     techUsed: ["JavaScript", "CSS3", "HTML5", "ReactJS", "Figma", "JSON Server"], 
+    caseStudy: {
+      // Each element in the following arrays represents a new paragraph of text or an image
+      // A line break is placed after each paragraph to allow some separation between bodies of text or images
+      // If a key/value pair is not applicable to this project, leave an empty string ('' if value is just a string)
+      // or an empty array ( [] ). Any empty values will not be displayed in the case study.
 
+      // PLEASE PLACE ALL IMAGES IN THE 'images' FOLDER INSIDE 'public'
+
+      problem: [
+        "What problems were you working through?", 
+        "How did you define success?"
+      ],
+      audience: [
+        "Who were the target users for the project?", 
+        "Why them?", 
+        "How did you decide they were the users?", 
+        "Any personas created?"
+      ],
+      personas: [], // ex: ['persona1.jpg', 'persona2.jpg', ...]
+      challStmt: ["Challenge Statement"],
+      team: [
+        "Who worked with you on the project?",
+        "What was your team structure?"
+        ],
+      role: ["My Role"],
+      constraints: [
+        "Did you have any constraints?",
+        "Time, access to users, undefined problem, not enough people, too large of a scope, etc."
+      ],
+      // for the process, each array element can be an image or text
+      // This allows people to put pictures before or after some paragraphs of text
+      // Each element is checked for any image extensions (.jpg and .png)
+      // If an element includes either extension substring, try to find the image file attatched to the extension
+      process: [
+        "What was your design process?", 
+        "profile.jpg",
+        "What deliverables were you responsible for?", 
+        "profile.jpg",
+        "MiniClueTemp.png",
+        "Speak to messiness."
+      ],
+      retrospective: [
+        "Lessons learned — did you reach success metrics?",
+        "Work through the right problem?", 
+        "What would you do better if you could do it again?"
+      ],
+    }
   },
 ];
-
-// export const techUsed = [
-//   {
-//     id: 1,
-//     name: 'JavaScript',
-//   },
-//   {
-//     id: 2,
-//     name: 'CSS3',
-//   },
-//   {
-//     id: 3,
-//     name: 'HTML5',
-//   },
-//   {
-//     id: 4,
-//     name: 'Bootstrap',
-//   },
-//   {
-//     id: 5,
-//     name: 'ReactJS',
-//   },
-//   {
-//     id: 6,
-//     name: 'Figma',
-//   },
-//   {
-//     id: 7,
-//     name: 'JSON Server',
-//   },
-//   {
-//     id: 8,
-//     name: 'Sass',
-//   },
-// ]
-
 
 // CONTACT DATA
 export const contactData = {
