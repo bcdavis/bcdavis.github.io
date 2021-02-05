@@ -4,7 +4,7 @@
     display: none;
     margin: 1em 0;
     transform: translateY(-100%);
-    transition: transform 0.3s ease-out 0.5s;
+    transition: transform 0.3s ease-out 0.5s !important;
 }
 .drawer-open{
         transform: translateY(0%);

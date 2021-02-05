@@ -37,12 +37,50 @@ export const projectsData = [
     id: nanoid(),
     img: "MiniClueTemp.png",
     title: 'Mini Clue',
-    info: 'This is a simplified, single-player version of the game Clue. Games consist of one player constantly making accusatory guesses in an attempt to narrow down the culprit and can last as short as a minute (or less). This project was built using <span class="highlight">ReactJS</span>.',
+    info: 'A simplified, online, competitive, single-player version of the game Clue®.',
     info2: '',
     url: '', // url for live demo of project
     repo: 'https://github.com/bcdavis/CH43-Capstone-Mini-Clue', // if no repo, the button will not show up
+    techUsed: ["JavaScript", "CSS3", "HTML5", "ReactJS", "Figma", "JSON Server"], 
+
   },
 ];
+
+// export const techUsed = [
+//   {
+//     id: 1,
+//     name: 'JavaScript',
+//   },
+//   {
+//     id: 2,
+//     name: 'CSS3',
+//   },
+//   {
+//     id: 3,
+//     name: 'HTML5',
+//   },
+//   {
+//     id: 4,
+//     name: 'Bootstrap',
+//   },
+//   {
+//     id: 5,
+//     name: 'ReactJS',
+//   },
+//   {
+//     id: 6,
+//     name: 'Figma',
+//   },
+//   {
+//     id: 7,
+//     name: 'JSON Server',
+//   },
+//   {
+//     id: 8,
+//     name: 'Sass',
+//   },
+// ]
+
 
 // CONTACT DATA
 export const contactData = {

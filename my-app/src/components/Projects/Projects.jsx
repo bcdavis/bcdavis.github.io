@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import Fade from 'react-reveal/Fade';
 import Tilt from 'react-tilt';
 import Image from 'react-bootstrap/Image';
-import { Container, Row, Col } from 'react-bootstrap';
+import { Container, Row, Col, Badge } from 'react-bootstrap';
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
 //import Button from 'react-bootstrap/Button';
 import ToggleButton from 'react-bootstrap/ToggleButton'
@@ -94,6 +94,9 @@ const Projects = () => {
       }
     }
   }
+
+
+
 
   const handleCaseStudy = (e) => {
 
@@ -196,14 +199,18 @@ const Projects = () => {
     }
   };
 
+
   return (
     <section id="projects">
       <Container>
         <div className="project-wrapper">
           <Title title="Projects" />
           {projects.map((project) => {
-            const { title, info, info2, url, repo, img, id } = project;
+            const { title, info, info2, url, repo, img, id, techUsed } = project;
             // for each project, store its variables to use for rendering
+            //let techList = techUsed.split(" ");
+            // split up techUsed string into array of tech names, separated by spaces
+
 
             return (
               <Row key={id}>
@@ -218,8 +225,19 @@ const Projects = () => {
                     <div className="project-wrapper__text">
                       <h3 className="project-wrapper__text-title">{title || 'Project Title'}</h3>
                       <div>
-                        <p className="mb-4">This is a simplified, single-player version of the game Clue®. Games consist of a user constantly making accusatory guesses in an attempt to narrow down the culprit. This project was built using <span class="highlight">ReactJS</span>.</p>
-                        <p className="mb-4">{info2 || ''}</p>
+                        <p className="mb-4">
+                          {info === '' ? '' : info}
+                        </p>
+                        <div className="tech-badges">
+                          {techUsed.map((techName) => {
+                            return (
+                              <div className="badgeContainer">
+                                <Badge className="techBadge-outline" variant="light">{techName}</Badge>
+                              </div>
+                            )
+                          })}
+
+                        </div>
                       </div>
                       <ButtonGroup toggle vertical className="proj-btns">
                         <ToggleButton
@@ -233,14 +251,16 @@ const Projects = () => {
                           View Case Study
                         </ToggleButton>
                         <ButtonGroup className="live-src-btns">
-                          <a
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="cta-btn text-color-main"
-                            href={url || '#!'}
-                          >
-                            See Live
-                          </a>
+                          {url === '' ? '' : 
+                            <a
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="cta-btn text-color-main"
+                              href={url || '#!'}
+                            >
+                              See Live
+                            </a>
+                          }
 
                           {repo && (
                             <a

@@ -50,7 +50,7 @@ const NavBar = () => {
       <Nav navbar={true} className="sidenav menu" id="vert-nav" as="ul">
           <Nav.Item as="li">
             <div id="vert-nav-top">
-              <Link className="nav-link to-hero" to="hero" smooth duration={700}>             
+              <Link className="to-hero" to="hero" smooth duration={700}>             
                 <h3>Ben Davis</h3>
                 <p>UI/UX Designer & Developer</p>
               </Link>
@@ -78,7 +78,7 @@ const NavBar = () => {
               smooth
               duration={700}
               spy={true}
-              offset={-100}
+              offset={0}
             >
               <div>
                 <i className="fa fa-user nav-link__icon" />
@@ -93,7 +93,7 @@ const NavBar = () => {
               smooth
               duration={700}
               spy={true}
-              offset={-100}
+              offset={0}
             >
               <div>
                 <i className="fa fa-file-code-o nav-link__icon" />
@@ -108,7 +108,7 @@ const NavBar = () => {
               smooth
               duration={700}
               spy={true}
-              offset={-100}
+              offset={0}
             >
               <div>
                 <i className="fa fa-paper-plane nav-link__icon" />
@@ -123,6 +123,7 @@ const NavBar = () => {
                 const { id, name, url } = network;
                 return (
                   <a
+                    id={`${name}-icon`}
                     key={id}
                     href={url || 'https://github.com/cobidev/gatsby-simplefolio'}
                     rel="noopener noreferrer"
