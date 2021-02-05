@@ -209,10 +209,10 @@
       p{
         font-size: 1.4rem;
         @include respond(tab-port){
-          font-size: 1.3rem;
+          font-size: 1.15rem;
         }
         @include respond(phone-land){
-          font-size: 1.3rem;
+          font-size: 1.15rem;
           margin-bottom: 0;
         }
         @include respond(phone){

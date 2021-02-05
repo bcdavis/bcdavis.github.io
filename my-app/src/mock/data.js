@@ -37,7 +37,7 @@ export const projectsData = [
     id: nanoid(),
     img: "MiniClueTemp.png",
     title: 'Mini Clue',
-    info: 'A simplified, online, competitive, single-player version of the game Clue®.',
+    info: 'A simplified, online, competitive, single-player version of the classic detective game Clue®.',
     info2: '',
     url: '', // url for live demo of project
     repo: 'https://github.com/bcdavis/CH43-Capstone-Mini-Clue', // if no repo, the button will not show up
@@ -84,7 +84,7 @@ export const projectsData = [
 
 // CONTACT DATA
 export const contactData = {
-  cta: "Let's work together!",
+  cta: "I'm excited to work together with you and your team!",
   btn: '',
   email: 'bcollinsdavis@gmail.com',
 };

@@ -24,10 +24,11 @@ const Contact = () => {
             <a
               target="_blank"
               rel="noopener noreferrer"
-              className="cta-btn cta-btn--resume"
+              className="contact-email-btn cta-btn cta-btn--resume"
               href={email ? `mailto:${email}` : 'https://github.com/cobidev/react-simplefolio'}
             >
               {btn || "Let's Talk"}
+              <i className="contact-email-icon fa fa-envelope"></i>
             </a>
           </div>
 

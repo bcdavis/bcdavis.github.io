@@ -188,7 +188,6 @@ const Projects = () => {
     //  console.log(e.currentTarget.checked);
     setChecked(e.currentTarget.checked);
     
-    // console.log('checked: ', checked);
 
     const drawer = document.querySelector('.case-study-drawer');
     if(checked){

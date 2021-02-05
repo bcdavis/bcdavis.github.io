@@ -145,9 +145,6 @@
     max-width: 80%;
   }
 
-
-  // justify-content: space-between;
-
 }
 
 .badgeContainer {
@@ -161,9 +158,10 @@
 }
  
 .techBadge-outline {
+  font-size: 1em;
   border: 1px solid black;
   // flex: 0 0 25%;
-  padding: 0.75em;
+  padding: 0.5em;
   width: fit-content;
 }
 
