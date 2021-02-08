@@ -35,7 +35,7 @@ const About = () => {
             </Fade>
           </Col> */}
           <Col className="info-wrapper" md={10} sm={12}>
-            <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={1000} distance="30px">
+            <Fade left={isDesktop} bottom={isMobile} duration={500} delay={250} distance="30px">
               <div className="about-wrapper__info">
                 <p className="about-wrapper__info-text">
                   {paragraphOne ||
@@ -54,7 +54,7 @@ const About = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                       className="cta-btn cta-btn--resume"
-                      href={window.location.href + resume}
+                      href={resume}
                     >
                       Resume
                     </a>

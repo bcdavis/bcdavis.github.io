@@ -31,9 +31,11 @@ const CaseStudySlideDrawer = ({ currProj, handleCaseStudy, isCaseStudyOpen, chec
     console.log("currProj", currProj);
     // pass in the currently-rendering project
     // Grab caseStudy attribute from object:
-    const cs = currProj.caseStudy; // caseStudy is an object with the following keys:
-
+    const cs = currProj.caseStudy; // caseStudy is an object with the following properties:
+    
     // Problem, audience, personas, challStmt, Team, Role, Constraints, Process, Retrospective 
+    
+    //const cs_keys = Object.keys(cs); // return an array of keys --- used for future improvements
 
     // This function renders the paragraphs of written content associated with a case study section
     const renderSection = (sectionTitle, inputList) => {
@@ -41,30 +43,33 @@ const CaseStudySlideDrawer = ({ currProj, handleCaseStudy, isCaseStudyOpen, chec
         // inputList is an array of strings
         return (
             <>
-                <h3 className="cs-title">{sectionTitle}</h3>
-                <div className="cs-paragraphs">
-                    {inputList.map((para) => {
-                        // para is a string element in the inputList array
+                <div className="cs-section">
+                    <h3 className="cs-title">{sectionTitle}</h3>
+                    <div className="cs-paragraphs">
+                        {inputList.map((para) => {
+                            // para is a string element in the inputList array
 
-                        // Check if para is an image file name
-                        if((para.indexOf(".jpg") > 0) || (para.indexOf(".png") > 0)){
-                            // The para string could be an image with .jpg or .png extension
-                            return (
-                                <div className="cs-img-container">
-                                    <Image className="cs-img" src={`/images/${para}`} fluid/>
-                                </div>
-                            )
-                        }
-                        // If not a file name, treat as regular text
-                        else {
-                            return (
-                                <p className="cs-para-text">{para}</p>
-                            )
-                        }
+                            // Check if para is an image file name
+                            if((para.indexOf(".jpg") > 0) || (para.indexOf(".png") > 0)){
+                                // The para string could be an image with .jpg or .png extension
+                                return (
+                                    <div className="cs-img-container">
+                                        <Image className="cs-img" src={`/images/${para}`} fluid/>
+                                    </div>
+                                )
+                            }
+                            // If not a file name, treat as regular text
+                            else {
+                                return (
+                                    <p className="cs-para-text">{para}</p>
+                                )
+                            }
 
-                    })}
+                        })}
+                    </div>
+                    {/* add a line break after each section */}
+                    <br></br> 
                 </div>
-                <br></br>
                 
             </>
         )
@@ -74,8 +79,9 @@ const CaseStudySlideDrawer = ({ currProj, handleCaseStudy, isCaseStudyOpen, chec
 
     return (
         <>
-            <Fade left={isDesktop} bottom={isMobile} duration={500} delay={0} distance="0px">
+            {/* <Fade left={isDesktop} bottom={isMobile} duration={500} delay={0} distance="0px"> */}
                 <div id={`cs-drawer-${currProj.id}`} className="cs-drawer">
+                    {cs.background.length > 0 ? renderSection("Background", cs.background): null}
                     {cs.problem.length > 0 ? renderSection("Problem", cs.problem) : null}
                     {cs.audience.length > 0 ? renderSection("Audience", cs.audience) : null}
                     {cs.personas.length > 0 ? renderSection("Personas", cs.personas) : null}
@@ -100,7 +106,7 @@ const CaseStudySlideDrawer = ({ currProj, handleCaseStudy, isCaseStudyOpen, chec
                         </ButtonGroup>
                     </div>
                 </div>
-            </Fade>
+            {/* </Fade> */}
         </>
     )
 }

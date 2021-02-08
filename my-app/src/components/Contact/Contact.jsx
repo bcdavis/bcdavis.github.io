@@ -16,7 +16,7 @@ const Contact = () => {
     <section id="contact">
       <Container>
         <Title title="Contact" />
-        <Fade bottom duration={1000} delay={800} distance="30px">
+        <Fade bottom duration={500} delay={250} distance="30px">
           <div className="contact-wrapper">
             <p className="contact-wrapper__text">
               {cta || 'Wanna catch up?'}
@@ -33,7 +33,7 @@ const Contact = () => {
           </div>
 
         </Fade>
-        <Fade bottom duration={1000} delay={1000} distance="20px">
+        <Fade bottom duration={500} delay={250} distance="20px">
           <div className="social-links--contact">
             {networks &&
               networks.map((network) => {
