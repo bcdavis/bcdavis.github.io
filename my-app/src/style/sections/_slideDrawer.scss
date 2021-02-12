@@ -9,7 +9,7 @@
 }
 .drawer-open{
     background-color: $off-white;
-    box-shadow: 0px 4px 10px inset rgb(186, 186, 186);
+    box-shadow: 0px 4px 10px inset rgb(196, 196, 196);
     text-align: left;
     transform: translateY(0%);
     display: block;
@@ -48,8 +48,27 @@
 }
 
 .cs-img {
-    width: 100%;
-    max-width: 900px;
+    
+
+    max-width: 700px;
+    max-height: 1000px;
+    box-shadow: 0px 5px 10px -5px darkgrey;
+
+    @include respond(tab-land) {
+        max-width: 600px;
+    }
+
+    @include respond(tab-port) {
+        max-width: 450px;
+    }
+
+    @include respond(phone) {
+        max-width: 350px;
+    }
+
+    @include respond(phone-xs) {
+        max-width: 250px;
+    }
     
 }
 

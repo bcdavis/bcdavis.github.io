@@ -24,7 +24,7 @@ ORDER: Base + Typography > Generar Layout + Grid > Page Layout > Components
   
     // Phone-xs
     @if $breakpoint == phone-xs {
-      @media (max-width: 20em) {
+      @media (max-width: 26em) {
         @content;
       } //0 - 320px
     }

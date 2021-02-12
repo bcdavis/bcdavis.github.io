@@ -301,7 +301,7 @@ const Projects = () => {
                             }}
                           >
                               <div data-tilt className="thumbnail rounded containerHover">
-                                <Image className="img" src="/images/MiniClueTemp.png" fluid/>
+                                <Image className="img" src={`/images/${img}`} fluid/>
                                 {/* <div className="hoverMe"></div> */}
                               </div>
                           </Tilt>
