@@ -50,24 +50,25 @@
 .cs-img {
     
 
+    width: 80vw;
     max-width: 700px;
-    max-height: 1000px;
+    
     box-shadow: 0px 5px 10px -5px darkgrey;
 
     @include respond(tab-land) {
-        max-width: 600px;
+        max-width: 60vw;
     }
 
     @include respond(tab-port) {
-        max-width: 450px;
+        max-width: 60vw;
     }
 
     @include respond(phone) {
-        max-width: 350px;
+        max-width: 70vw;
     }
 
     @include respond(phone-xs) {
-        max-width: 250px;
+        max-width: 80vw;
     }
     
 }
