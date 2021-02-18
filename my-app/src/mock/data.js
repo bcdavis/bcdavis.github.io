@@ -36,6 +36,60 @@ export const projectsData = [
   {
     projNum: 0, // Incrememnt this number with each new project -- lets site know the order in which to render projects
     id: nanoid(),
+    img: "C43-Site-previewImg-1.png",
+    title: 'NSS Cohort 43 Website',
+    info: "Website for Nashville Software School's cohort 43 built by the cohort 43 UI/UX team.",
+    info2: '',
+    url: 'https://nss-day-cohort-43.github.io/', // url for live demo of project
+    repo: 'https://github.com/nss-day-cohort-43/nss-day-cohort-43.github.io', // if no repo, the button will not show up
+    techUsed: ["JavaScript", "CSS3", "HTML5", "Bootstrap", "ReactJS", "Figma"], 
+    caseStudy: {
+      // Each element in the following arrays represents a new paragraph of text or an image
+      // A line break is placed after each paragraph to allow some separation between bodies of text or images
+      // If a key/value pair is not applicable to this project, leave an empty string ('' if value is just a string)
+      // or an empty array ( [] ). Any empty values will not be displayed in the case study.
+
+      // PLEASE PLACE ALL IMAGES IN THE 'images' FOLDER INSIDE 'public'
+
+      background: [],
+      problem: [],
+      audience: [
+        "This project was geared towards individuals who want to play Clue® but may not have the time to play, others to play with, or even the board itself. Mini Clue is also a resource for those wishing to improve their fictional detective work by providing a measurable high score for each user. This also induces competition between users for the highest scoring game.", 
+      ],
+      personas: [], // ex: ['persona1.jpg', 'persona2.jpg', ...]
+      challStmt: ["How might we promote Demo Day and showcase Cohort 43's dual skill sets to potential employers with the ultimate goal of employment?"],
+      team: [],
+      role: ["UI/UX Designer & Front-End Developer", "During the prototyping and development stage, I focused on designing and implementing the cards on which each student's  image, favorite quote, name, and social links would be displayed."],
+      constraints: [],
+      // for the process, each array element can be an image or text
+      // This allows people to put pictures before or after some paragraphs of text
+      // Each element is checked for any image extensions (.jpg and .png)
+      // If an element includes either extension substring, try to find the image file attatched to the extension
+      process: [
+        "This project started off with the class splitting into two teams to wireframe and mock up a class site, with the end goal of showcasing our designs, defending them, and compromising on which project we should move ahead with.",
+        "C43-Site-Mockup-Team1.png",
+        "C43-Site-Mockup-Team2.png",
+        "After discussion, we realized both teams brought good ideas to the table. We decided to merge the 2 into a hybrid design.",
+        "One team used Pantone's color of the year for 2021, Illuminating, with a teal that paired well with it. The bright gold color felt fresh and exciting - a new beginning. We wanted to convey that as new hires, we can provide a fresh and aspirational face to any company that might consider hiring us.",
+        "The other team had a clear, card based layout that displayed the students in a clear and effective manner. We liked the way this layout showed the technologies our cohort learned over our time at NSS.",
+        "We came together and created a new mockup.",
+        "C43-Site-Mockup-Comp.png",
+        "We began user testing with 3 development professionals. We took their feedback and improved our site. We did 2 more rounds of user testing and decided on our final design.",
+        "C43-Site-Final.png",
+      ],
+      retrospective: [
+        "User testing from the beginning helped us make better design decisions. We realized usability trumps innovative design.",
+        "We learned how to facilitate remote user tests.", 
+      ],
+      links: [
+        "GitHub Repo",
+        "Live Site"
+      ]
+    }
+  },
+  {
+    projNum: 1, // Incrememnt this number with each new project -- lets site know the order in which to render projects
+    id: nanoid(),
     img: "MiniClueTemp.png",
     title: 'Mini Clue',
     info: 'A simplified, online, competitive, single-player version of the classic detective game Clue®.',
@@ -99,7 +153,7 @@ export const projectsData = [
     }
   },
   {
-    projNum: 1, // Incrememnt this number with each new project -- lets site know the order in which to render projects
+    projNum: 2, // Incrememnt this number with each new project -- lets site know the order in which to render projects
     id: nanoid(),
     img: "REM_preview.png",
     title: 'REM LOG',
