@@ -1,16 +1,10 @@
 import React, { useContext, useEffect, useState } from 'react';
 import Fade from 'react-reveal/Fade';
 import Tilt from 'react-tilt';
-//import Image from 'react-bootstrap/Image';
 import { Container, Row, Col, Badge, ToggleButton, Button, Image, ButtonGroup, Accordion } from 'react-bootstrap';
-//import ButtonGroup from 'react-bootstrap/ButtonGroup';
-//import Button from 'react-bootstrap/Button';
-//import ToggleButton from 'react-bootstrap/ToggleButton'
 import PortfolioContext from '../../context/context';
 import Title from '../Title/Title';
-//import ProjectImg from '../Image/ProjectImg';
 import CaseStudySlideDrawer from './CaseStudySlideDrawer';
-//import { element } from 'prop-types';
 
 const Projects = () => {
   const { projects } = useContext(PortfolioContext); // get all projects from data.js?
@@ -42,27 +36,26 @@ const Projects = () => {
     }
   }, []);
 
-
-  // useEffect(() => {
-  //   console.log('Case Study Action: ', isCaseStudyOpen.id);
-  // }, []);
-
+  /*
   useEffect(() => {
     if (checked) {
       console.log('Checked: ', checked);
+      
     }
     else{ 
       console.log('Checked: ', checked);
     }
   }, [checked]);
-
+  */
 
   useEffect(() => {
-    console.log("isCaseStudyOpen--useEffect(): ", isCaseStudyOpen);
+    //console.log("PROJECTS---isCaseStudyOpen--useEffect(): ", isCaseStudyOpen);
     if (isCaseStudyOpen.open === true) {
-      console.log('Case study is open: ', isCaseStudyOpen.id);
+      //console.log('Case study is open: ', isCaseStudyOpen.id);
+      console.log();
     } else {
-      console.log('Case Study is closed:', isCaseStudyOpen.id);
+      //console.log('Case Study is closed:', isCaseStudyOpen.id);
+      console.log();
     }
   }, []);
 
@@ -99,9 +92,6 @@ const Projects = () => {
 
 
   const handleCaseStudy = (e) => {
-
-
-    //console.log('CASE STUUUUDY!');
     const prevCS = isCaseStudyOpen; // the id and open status of the project last interacted with
     const prevCaseStudyBtn = document.getElementById(`${prevCS.id}`); // grabs the case study button of the current project
     const prevDrawer = document.getElementById(`${prevCS.id}-drawer`); // grab the case study drawer of the project last interacted with
@@ -176,11 +166,6 @@ const Projects = () => {
     }
     //console.log(outcome);
   };
-
-  // const handleCountClick = (n) => {
-  //   const plusOne = n + 1;
-  //   setCount(plusOne);
-  // };
 
   // const handleCheck = (e) => {
   //   console.log('drawers: ', drawers);

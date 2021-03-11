@@ -3,32 +3,34 @@
 // The case study slides out from underneath the project card, and is populated with
 // relevant case study data from data.js
 
-import React, { useContext, useEffect, useState } from 'react';
-import Fade from 'react-reveal/Fade';
-import { Container, Row, Col, Badge, Image, ToggleButton, ButtonGroup } from 'react-bootstrap';
+import React, { useEffect, useState } from 'react';
+//import Fade from 'react-reveal/Fade';
+import { Image, ToggleButton, ButtonGroup } from 'react-bootstrap';
 //import Image from 'react-bootstrap/Image';
 // import { Container, Col } from 'react-bootstrap';
 
 
 
 const CaseStudySlideDrawer = ({ currProj, handleCaseStudy, isCaseStudyOpen, checked }) => {
-    const csBtnText_toOpen = "View Case Study";
-    const csBtnText_toClose = "Close Case Study";
+    //const csBtnText_toOpen = "View Case Study";
+    //const csBtnText_toClose = "Close Case Study";
 
     const [isDesktop, setIsDesktop] = useState(false);
     const [isMobile, setIsMobile] = useState(false);
 
     useEffect(() => {
-        console.log("isCaseStudyOpen--useEffect(): ", isCaseStudyOpen);
+        //console.log("CASESTUDY---isCaseStudyOpen--useEffect(): ", isCaseStudyOpen);
         if (isCaseStudyOpen.open === true) {
-            console.log('Case study is open: ', isCaseStudyOpen.id);
+            //console.log('Case study is open: ', isCaseStudyOpen.id);
+            console.log();
         } else {
-            console.log('Case Study is closed:', isCaseStudyOpen.id);
+            //console.log('Case Study is closed:', isCaseStudyOpen.id);
+            console.log();
         }
     }, []);
 
 
-    console.log("currProj", currProj);
+    //console.log("currProj", currProj);
     // pass in the currently-rendering project
     // Grab caseStudy attribute from object:
     const cs = currProj.caseStudy; // caseStudy is an object with the following properties:

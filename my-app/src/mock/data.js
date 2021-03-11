@@ -34,7 +34,7 @@ export const aboutData = {
 // PROJECTS DATA
 export const projectsData = [
   {
-    projNum: 0, // Incrememnt this number with each new project -- lets site know the order in which to render projects
+    projNum: 0, // Increment this number with each new project -- lets site know the order in which to render projects
     id: nanoid(),
     img: "C43-Site-previewImg-1.png",
     title: 'NSS Cohort 43 Website',
@@ -64,15 +64,15 @@ export const projectsData = [
       // for the process, each array element can be an image or text
       // This allows people to put pictures before or after some paragraphs of text
       // Each element is checked for any image extensions (.jpg and .png)
-      // If an element includes either extension substring, try to find the image file attatched to the extension
+      // If an element includes either extension substring, try to find the image file attached to the extension
       process: [
         "This project was organized and executed by the UI/UX side of Cohort 43. We started off with the UI/UX group splitting into two teams, each to wireframe and mock up a prototype class site. This was the initial brainstorming stage since both teams' prototypes would be compared to spark a direction of design for the final site.",
-        "My team's design is shown below with distinct sections and a clear grid layout of cards displaying students in an effective, regognized manner. With a layout inspired by previous NSS cohort websites, we utilized the NSS logo red-orange gradient and a flat, contrasting navy blue as our primary colors.",
+        "My team's design is shown below with distinct sections and a clear grid layout of cards displaying students in an effective, recognized manner. With a layout inspired by previous NSS cohort websites, we utilized the NSS logo red-orange gradient and a flat, contrasting navy blue as our primary colors.",
         "C43-Site-Mockup-Team1.png",
         "The other team used Pantone's color of the year for 2021, Illuminating, with a teal that paired well with it. They used these colors to design a unique, abstract, and attention-grabbing site header above the fold, which is shown below.",
         "C43-Site-Mockup-Team2.png",
         "After discussion, we realized both teams brought good ideas to the table. We all liked the way the first team's layout showed the technologies our cohort learned over our time at NSS. We also liked the color choice of the other team and the methodology behind the decision. The bright gold color felt fresh and exciting - a new beginning. We wanted to convey that as new hires, we can provide a fresh and aspirational face to any company that might consider hiring us.",
-        "With a compromise found between the two prototypes, we decided to merge the two into a hybrid design. We came together and created a new mockup shown below which incorportated the color scheme of the second team's prototype with the layout of the first team's prototype.",
+        "With a compromise found between the two prototypes, we decided to merge the two into a hybrid design. We came together and created a new mockup shown below which incorporated the color scheme of the second team's prototype with the layout of the first team's prototype.",
         "C43-Site-Mockup-Comp.png",
         "We began user testing with 3 development professionals. We took their feedback and improved our site. We did 2 more rounds of user testing and decided on our final design.",
         "C43-Site-Final.png",
@@ -88,7 +88,7 @@ export const projectsData = [
     }
   },
   {
-    projNum: 1, // Incrememnt this number with each new project -- lets site know the order in which to render projects
+    projNum: 1, // Increment this number with each new project -- lets site know the order in which to render projects
     id: nanoid(),
     img: "MiniClueTemp.png",
     title: 'Mini Clue',
@@ -107,10 +107,10 @@ export const projectsData = [
 
       background: ["Clue® is a famous classic mystery game played on a board by 3 - 6 players. The object of the game is to determine who murdered the game's victim, Mr. Body, where the crime took place, and which weapon was used. Each player assumes the role of one of the six suspects and attempts to deduce the correct answer by strategically moving around a game board representing the rooms of a mansion and collecting clues about the circumstances of the murder from the other players."],
       problem: [
-        "The biggest problem with Clue®, though, is it's accessibility. As of Fall 2020, there was no free, online, competitive, single-player, version of the boardgame Clue®.",
+        "The biggest problem with Clue®, though, is its accessibility. As of Fall 2020, there was no free, online, competitive, single-player, version of the boardgame Clue®.", 
         "A solution to this accessibility issue would be an online resource where individuals can quickly and easily play a game of Clue® by themselves. To measure a user's skill, each user would create an account where they could track their highest score and see the high scores of other users in a leaderboard.",
         "Another issue facing Clue® itself was the fact that there was no way to customize the game. My solution would also include a method to customize the names of characters, weapons, and rooms inside a game. The custom game would be saved to the user who created it, but custom games would also have the option to be shared with all other users for them to play.",
-        "Success of this project would be acheived if players could create an account, play a classic game version, save their highest score and display that score on a scoreboard."
+        "Success of this project would be achieved if players could create an account, play a classic game version, save their highest score and display that score on a scoreboard."
       ],
       audience: [
         "This project was geared towards individuals who want to play Clue® but may not have the time to play, others to play with, or even the board itself. Mini Clue is also a resource for those wishing to improve their fictional detective work by providing a measurable high score for each user. This also induces competition between users for the highest scoring game.", 
@@ -125,9 +125,9 @@ export const projectsData = [
       // for the process, each array element can be an image or text
       // This allows people to put pictures before or after some paragraphs of text
       // Each element is checked for any image extensions (.jpg and .png)
-      // If an element includes either extension substring, try to find the image file attatched to the extension
+      // If an element includes either extension substring, try to find the image file attached to the extension
       process: [
-        "The first and arguably most important part of this project was solidifying the organization of data in the database. An ERD was created to record the essential information to acheive this project's goal.", 
+        "The first and arguably most important part of this project was solidifying the organization of data in the database. An ERD was created to record the essential information to achieve this project's goal.", 
         "MiniClueERD.png",
         "The ERD above begins with the user account – locked behind a username and email address. Each user would have an id which was associated with their highest game score and any custom games they create. Every game of Mini Clue needed cards, so the cards are stored in a separate table, each card containing the id of the game to which it belonged. The original 21 cards have a corresponding game id of 0, which is the id for a classic game of Mini Clue.",
         "Next came the wireframing and prototyping. I used pencil and paper to sketch my initial concepts and flow diagrams and then mocked those up using Figma. The state diagram below represents the process of playing a game of Mini Clue.",
@@ -136,7 +136,7 @@ export const projectsData = [
         "MiniClueHomePage.png",
         "MiniClueFigmaCreator.png",
         "MiniClueFigmaAbout.png",
-        "Once the protoyping was complete, I began programming. I hosted a local database using JSON Server to act as my real-time database. I created some placeholder user data using famous fictional detectives like Sherlock Holmes. The following images show the final product as of demo day (Nov 20, 2020).",
+        "Once the prototyping was complete, I began programming. I hosted a local database using JSON Server to act as my real-time database. I created some placeholder user data using famous fictional detectives like Sherlock Holmes. The following images show the final product as of demo day (Nov 20, 2020).",
         "MiniClueDemo_Login.png",
         "MiniClueDemo_Home.png",
         "MiniClueDemo_About.png",
@@ -153,7 +153,7 @@ export const projectsData = [
     }
   },
   {
-    projNum: 2, // Incrememnt this number with each new project -- lets site know the order in which to render projects
+    projNum: 2, // Increment this number with each new project -- lets site know the order in which to render projects
     id: nanoid(),
     img: "REM_preview.png",
     title: 'REM LOG',
@@ -190,11 +190,11 @@ export const projectsData = [
       // for the process, each array element can be an image or text
       // This allows people to put pictures before or after some paragraphs of text
       // Each element is checked for any image extensions (.jpg and .png)
-      // If an element includes either extension substring, try to find the image file attatched to the extension
+      // If an element includes either extension substring, try to find the image file attached to the extension
       process: [
-        "The first and arguably most important part of this project was solidifying the organization of data in the database. An ERD was created to record the essential information to acheive this project's goal.", 
+        "The first and arguably most important part of this project was solidifying the organization of data in the database. An ERD was created to record the essential information to achieve this project's goal.", 
         "REM_ERD.png",
-        "Next came the wireframing and prototyping. I made some initial ocmponents in Figma that are shown below.",
+        "Next came the wireframing and prototyping. I made some initial components in Figma that are shown below.",
         "REM_FIG_components.png",
         "The following Figma frames were my initial mock-ups for the project made using the components from the image above: ",
         "REM_FIG_list.png",
@@ -202,12 +202,12 @@ export const projectsData = [
         "REM_FIG_add.png",
         "REM_FIG_addRec.png",
         "REM_FIG_addAudio.png",
-        "Once the protoyping was complete, I began programming. I hosted a local database using JSON Server to act as my real-time database. I chose to add react-bootstrap's component library to the project, which would help with the constructing of forms and other components. In the components image above, I made two versions of dream cards. I decided to work with the second version (the one that wasn't used in the Figma mockups above) because it's layout was more conducive to react-bootstrap's Card component. I also imported Bootstrap's icon library to reference for my icons.",
+        "Once the prototyping was complete, I began programming. I hosted a local database using JSON Server to act as my real-time database. I chose to add react-bootstrap's component library to the project, which would help with the constructing of forms and other components. In the components image above, I made two versions of dream cards. I decided to work with the second version (the one that wasn't used in the Figma mockups above) because it's layout was more conducive to react-bootstrap's Card component. I also imported Bootstrap's icon library to reference for my icons.",
         "REM_login.png",
         "REM_list.png",
         "REM_view.png",
         "REM_add.png",
-        "The most difficult part of this project, by far, was working with recording audio from the built-in microphone through the browser. I looked for pre-existing react components which could switfly record and store an audio file. I ended up Using a basic audio recording script which asked the browser for permission to use the microphone, recorded audio at the press of a button, and renderd a basic HTML audio element once captured. Since I was hosting my website through JSON Server, I could not store the audio file iteself. So, this iteration of the project will save the name of the audio file recorded, but not the file itself until I incorporate some external support from a file-storing resource like Cloudinary.",
+        "The most difficult part of this project, by far, was working with recording audio from the built-in microphone through the browser. I looked for pre-existing react components which could swiftly record and store an audio file. I ended up Using a basic audio recording script which asked the browser for permission to use the microphone, recorded audio at the press of a button, and rendered a basic HTML audio element once captured. Since I was hosting my website through JSON Server, I could not store the audio file itself. So, this iteration of the project will save the name of the audio file recorded, but not the file itself until I incorporate some external support from a file-storing resource like Cloudinary.",
       ],
       retrospective: [
         "Completed my second capstone for Nashville Software School by creating a React web app.",
