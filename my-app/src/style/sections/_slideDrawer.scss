@@ -1,20 +1,21 @@
 
 .case-study-drawer {
     text-align: left;
-    display: none;
+    //display: none;
     margin: 1em auto;
-    transform: translateY(-100%);
+    //transform: translateY(-100%);
     //transition: all 1 ease-out 0.0 !important;
-    background-color: black;
+    //background-color: black;
 }
-.drawer-open{
-    background-color: $off-white;
-    box-shadow: 0px 4px 10px inset rgb(196, 196, 196);
+.cs-collapse{
+    //background-color: $off-white;
+    background-color: white;
+    box-shadow: 0px 4px 10px inset $off-white; //rgb(196, 196, 196)
     text-align: left;
     transform: translateY(0%);
     display: block;
     width: 100%;
-    padding: 2em 26px;
+    padding: 2em 2em;
 
 }
     

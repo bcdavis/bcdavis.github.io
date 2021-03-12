@@ -5,7 +5,7 @@
 
 import React, { useEffect, useState } from 'react';
 //import Fade from 'react-reveal/Fade';
-import { Image, ToggleButton, ButtonGroup } from 'react-bootstrap';
+import { Image, ToggleButton, Button, ButtonGroup, Accordion} from 'react-bootstrap';
 //import Image from 'react-bootstrap/Image';
 // import { Container, Col } from 'react-bootstrap';
 
@@ -18,16 +18,18 @@ const CaseStudySlideDrawer = ({ currProj, handleCaseStudy, isCaseStudyOpen, chec
     const [isDesktop, setIsDesktop] = useState(false);
     const [isMobile, setIsMobile] = useState(false);
 
-    useEffect(() => {
-        //console.log("CASESTUDY---isCaseStudyOpen--useEffect(): ", isCaseStudyOpen);
-        if (isCaseStudyOpen.open === true) {
-            //console.log('Case study is open: ', isCaseStudyOpen.id);
-            console.log();
-        } else {
-            //console.log('Case Study is closed:', isCaseStudyOpen.id);
-            console.log();
-        }
-    }, []);
+    const [activeId, setActiveId] = useState(isCaseStudyOpen);
+
+    // useEffect(() => {
+    //     //console.log("CASESTUDY---isCaseStudyOpen--useEffect(): ", isCaseStudyOpen);
+    //     if (isCaseStudyOpen.open === true) {
+    //         //console.log('Case study is open: ', isCaseStudyOpen.id);
+    //         console.log();
+    //     } else {
+    //         //console.log('Case Study is closed:', isCaseStudyOpen.id);
+    //         console.log();
+    //     }
+    // }, []);
 
 
     //console.log("currProj", currProj);
@@ -94,7 +96,20 @@ const CaseStudySlideDrawer = ({ currProj, handleCaseStudy, isCaseStudyOpen, chec
                     {cs.process.length > 0 ? renderSection("Design Process", cs.process) : null}
                     {cs.retrospective.length > 0 ? renderSection("Success", cs.retrospective) : null}
                     <div className="cs-close-btn-container">
-                        <ButtonGroup toggle>
+                        <Accordion.Toggle as={Button} id={currProj.title} onClick={() => handleCaseStudy(currProj.projNum)} className="panel-toggle" eventKey={`${currProj.projNum}`}>                      
+                              {/* <ToggleButton
+                                id={title}
+                                type="checkbox"
+                                className="cta-btn cta-btn--hero case-study-btn"
+                                value={title}
+                                checked={checked}
+                                onChange={(e) => handleCaseStudy(e)}
+                              >
+                                View Case Study
+                              </ToggleButton> */}
+                                Close Case Study
+                              </Accordion.Toggle>
+                        {/* <ButtonGroup toggle>
                             <ToggleButton
                                 id={currProj.title}
                                 type="checkbox"
@@ -105,7 +120,7 @@ const CaseStudySlideDrawer = ({ currProj, handleCaseStudy, isCaseStudyOpen, chec
                                 >
                                 Close Case Study
                             </ToggleButton>
-                        </ButtonGroup>
+                        </ButtonGroup> */}
                     </div>
                 </div>
             {/* </Fade> */}

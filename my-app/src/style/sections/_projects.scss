@@ -254,3 +254,49 @@
   transition: all 0.2s ease-in;
 }
 
+
+
+.panel-wrap {
+  margin-bottom: 5px;
+}
+
+
+.panel-wrap.active-panel .panel-header button {
+  color: #ffffff;
+
+}
+
+
+
+.panel-wrap.inactive-panel .panel-body {
+  display: none;
+}
+
+.panel-wrap.active-panel .panel-body {
+  display: block;
+}
+
+.panel-header {
+  border: 1px solid #cccc;
+  font-weight: normal;
+  border-radius: 5px 5px 0px 0px;
+}
+
+.panel-header button {
+  background: transparent;
+}
+.panel-header button:focus {
+  outline: 0px auto -webkit-focus-ring-color;
+}
+
+.panel-body {
+  border: 1px solid #dddddd;
+  background: #efefef;
+  color: #333333;
+  //padding: 5px;
+  border-top: none;
+}
+
+.panel-wrap.active-panel .panel-toggle{
+  background: #396ea5;
+}
