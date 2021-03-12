@@ -330,8 +330,8 @@ const renderSection = (sectionTitle, inputList) => {
             return (
                 // <div className={activeId.id === projNum ? 'panel-wrap active-panel' : 'panel-wrap inactive-panel'}>
                   <Row key={id}>
-                    <Col lg={4} sm={12}>
-                      <Fade
+                     <Col lg={4} sm={12}> {/*Need to rearrange this*/}
+                      <Fade 
                         left={isDesktop}
                         bottom={isMobile}
                         duration={500}
