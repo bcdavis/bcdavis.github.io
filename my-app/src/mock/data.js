@@ -28,7 +28,7 @@ export const aboutData = {
   paragraphOne: 'With a Bachelor of Science in Electrical and Computer Engineering from Lipscomb University and a certificate of UI/UX Front-End Development & Design from Nashville Software School, I have a commitment to excellence, strong written language skills, creativity and artistic talent, as well as accomplishments as an amateur photographer.',
   paragraphTwo: '',
   paragraphThree: '',
-  resume: 'https://github.com/bcdavis/bcdavis.github.io/blob/gh-pages/BenDavis_2021_Resume.pdf', // if no resume, the button will not show up
+  resume: 'https://github.com/bcdavis/bcdavis.github.io/blob/gh-pages/BenDavis_MARCH_2021.pdf', // if no resume, the button will not show up
 };
 
 // PROJECTS DATA
@@ -222,7 +222,7 @@ export const projectsData = [
 export const contactData = {
   cta: "I'm excited to work together with you and your team!",
   btn: '',
-  email: 'bcollinsdavis@gmail.com',
+  email: 'bcdavis@i65n.com',
 };
 
 // FOOTER DATA
