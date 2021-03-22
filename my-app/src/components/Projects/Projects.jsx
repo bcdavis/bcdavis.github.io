@@ -27,11 +27,15 @@ const Projects = () => {
 
   const [open, setOpen] = useState(false);
 
+
+  // pseudo accordion functionality
+
+
   function toggleActive(id, event) {
     //debugger;
     event.preventDefault();
     let x = event.target.id;
-    console.log("toggleActive -- new id vs old id: ", id, activeId.id, activeId.open);
+    console.log("toggleActive -- new id vs old id: ", id, activeId.id, activeId.open, x);
     if (activeId.id === id) {
       // going from open case study to closed case study
       setActiveId({ open: false, id: null });
@@ -39,7 +43,7 @@ const Projects = () => {
       // going from closed or another open case study to a new open case study
       setActiveId({ open: true, id: id });
     }
-    document.getElementById(x).scrollIntoView();
+    document.getElementById(x).scrollIntoView(); // make the clicked button move to the top of the screen
   }
 
   //const drawers = document.querySelectorAll('.case-study-drawer');
