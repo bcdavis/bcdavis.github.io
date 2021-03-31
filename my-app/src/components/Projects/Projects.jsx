@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import Fade from 'react-reveal/Fade';
 import Tilt from 'react-tilt';
+//import { Link } from 'react-scroll';
 import { Container, Row, Col, Badge, ToggleButton, Button, Image, ButtonGroup, Collapse } from 'react-bootstrap';
 import PortfolioContext from '../../context/context';
 import Title from '../Title/Title';
@@ -35,6 +36,7 @@ const Projects = () => {
     //debugger;
     event.preventDefault();
     let x = event.target.id;
+
     console.log("toggleActive -- new id vs old id: ", id, activeId.id, activeId.open, x);
     if (activeId.id === id) {
       // going from open case study to closed case study
@@ -43,7 +45,17 @@ const Projects = () => {
       // going from closed or another open case study to a new open case study
       setActiveId({ open: true, id: id });
     }
-    document.getElementById(x).scrollIntoView(); // make the clicked button move to the top of the screen
+
+    // rename target id to target the button that's always visible above the sliding drawer
+    let dash = "-";
+    let splitStr = x.split("-"); // split up id by '-' character
+    if ( splitStr[0] === "toggleBtn2" ) {
+      splitStr[0] = "toggleBtn1"; // replace target id to always visible button
+    }
+  
+  let newId = splitStr[0].concat(dash, splitStr[1]);
+
+    document.getElementById(newId).scrollIntoView(); // make the clicked button move to the top of the screen
   }
 
   //const drawers = document.querySelectorAll('.case-study-drawer');
@@ -441,7 +453,9 @@ const renderSection = (sectionTitle, inputList) => {
                             aria-controls={`example-collapse-content${projNum}`}
                             aria-expanded={activeId.id === projNum} // open = an id not equal to 'null'
                             >
-                            Close Case Study
+                              {/* <Link to={`toggleBtn1-${title}`} smooth duration={1000}> */}
+                                Close Case Study
+                              {/* </Link> */}
                           </Button>
                         </Col>
                       </div>
